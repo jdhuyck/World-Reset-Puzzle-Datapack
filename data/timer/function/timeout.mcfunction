@@ -1,9 +1,16 @@
-gamerule showDeathMessages false
+# Unpause the timer
+scoreboard players set "paused" timerPaused 0
 
+# Kill players
+gamerule showDeathMessages false
 execute as @a[gamemode=!spectator] run damage @s 1000000 minecraft:generic
 
+# Play timeout sound
 playsound minecraft:block.anvil.land master @a ~ ~ ~ 1 1
 
-scoreboard players set "timer_value" countdownTimer 3080
-bossbar set timer:countdown color blue
-bossbar set timer:countdown visible true
+# Trigger external redstone command blocks with a small delay
+setblock -2 -59 -11 minecraft:redstone_block
+setblock -2 -59 -11 minecraft:air
+
+# Trigger restart function
+function timer:restart

@@ -1,6 +1,5 @@
 {
     "values": [
-        "timer:tick",
-        "block_regen:tick"
+        "timer:tick"
     ]
 }

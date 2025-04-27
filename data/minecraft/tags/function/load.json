@@ -1,6 +1,0 @@
-﻿{ 
-  "values": [ 
-      "timer:init",
-      "block_regen:init"
-  ] 
-}
