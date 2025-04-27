@@ -14,7 +14,7 @@ execute as @a run spawnpoint @s 3 -58 10
 # Create bossbar
 bossbar add timer:countdown ""
 execute store result bossbar timer:countdown max run scoreboard players get "maxTime" timerMax
-bossbar set timer:countdown color green
+bossbar set timer:countdown color blue
 bossbar set timer:countdown style notched_6
 bossbar set timer:countdown visible true
 bossbar set timer:countdown players @a

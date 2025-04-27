@@ -1,14 +1,11 @@
 execute if score "timer_value" countdownTimer matches 1.. run scoreboard players remove "timer_value" countdownTimer 1
 
-# Halfway
-execute if score "timer_value" countdownTimer matches 990 run playsound minecraft:block.note_block.pling master @a ~ ~ ~ 1 1
-
 # 30s
-execute if score "timer_value" countdownTimer matches 600 run playsound minecraft:block.note_block.pling master @a ~ ~ ~ 1 1
+execute as @a[scores={timer=30}] run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ 1 1
 execute if score "timer_value" countdownTimer matches 600 run bossbar set timer:countdown color yellow
 
 # 10s
-execute if score "timer_value" countdownTimer matches 200 run playsound minecraft:block.note_block.pling master @a ~ ~ ~ 1 1
+execute as @a[scores={timer=10}] run playsound minecraft:entity.arrow.hit_player master @s ~ ~ ~ 1 1
 execute if score "timer_value" countdownTimer matches 200 run bossbar set timer:countdown color red
 
 # 5s to 1s

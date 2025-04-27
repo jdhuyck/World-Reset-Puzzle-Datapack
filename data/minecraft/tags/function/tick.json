@@ -1,3 +1,5 @@
 {
-    "values": ["timer:tick"]
+    "values": [
+        "timer:tick"
+    ]
 }
